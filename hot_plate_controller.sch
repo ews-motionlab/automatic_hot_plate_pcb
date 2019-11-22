@@ -706,16 +706,20 @@ Please refer to &lt;a href="https://www.amazon.de/Ils-LOLIN32-V1-0-0-Bluetooth-E
 <part name="GND2" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="GND3" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="GND4" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
-<part name="J3" library="RE_hot_plate_controller" deviceset="B4B-PH-K-S(LF)(SN)" device=""/>
+<part name="J5" library="RE_hot_plate_controller" deviceset="B4B-PH-K-S(LF)(SN)" device=""/>
 <part name="GND5" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="P+3" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+5V" device=""/>
 <part name="P+4" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+5V" device=""/>
-<part name="J5" library="RE_hot_plate_controller" deviceset="1862042" device=""/>
-<part name="J6" library="RE_hot_plate_controller" deviceset="1862042" device=""/>
-<part name="J7" library="RE_hot_plate_controller" deviceset="1862042" device=""/>
+<part name="J1" library="RE_hot_plate_controller" deviceset="1862042" device=""/>
+<part name="J3" library="RE_hot_plate_controller" deviceset="1862042" device=""/>
+<part name="J4" library="RE_hot_plate_controller" deviceset="1862042" device=""/>
 <part name="U2" library="RE_hot_plate_controller" deviceset="MAX6675" device=""/>
 <part name="GND6" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="P+5" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+5V" device=""/>
+<part name="J2" library="RE_hot_plate_controller" deviceset="1862042" device=""/>
+<part name="J6" library="RE_hot_plate_controller" deviceset="B4B-PH-K-S(LF)(SN)" device=""/>
+<part name="GND7" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
+<part name="P+6" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+5V" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -725,6 +729,8 @@ Please refer to &lt;a href="https://www.amazon.de/Ils-LOLIN32-V1-0-0-Bluetooth-E
 IR temperature sensor</text>
 <text x="223.52" y="88.9" size="1.27" layer="91">Connection for a thermocouple 
 sensor</text>
+<text x="223.52" y="93.98" size="1.27" layer="91">Connection to an mlx9614 
+IR temperature sensor</text>
 </plain>
 <instances>
 <instance part="FRAME1" gate="G$1" x="0" y="0" smashed="yes">
@@ -758,7 +764,7 @@ sensor</text>
 <instance part="GND4" gate="1" x="30.48" y="96.52" smashed="yes">
 <attribute name="VALUE" x="27.94" y="93.98" size="1.778" layer="96"/>
 </instance>
-<instance part="J3" gate="G$1" x="228.6" y="139.7" smashed="yes">
+<instance part="J5" gate="G$1" x="228.6" y="139.7" smashed="yes">
 <attribute name="NAME" x="226.05818125" y="145.800359375" size="1.77926875" layer="95"/>
 <attribute name="VALUE" x="226.05705" y="129.5282" size="1.780059375" layer="96"/>
 </instance>
@@ -771,15 +777,15 @@ sensor</text>
 <instance part="P+4" gate="1" x="182.88" y="157.48" smashed="yes">
 <attribute name="VALUE" x="180.34" y="152.4" size="1.778" layer="96" rot="R90"/>
 </instance>
-<instance part="J5" gate="G$1" x="15.24" y="147.32" smashed="yes" rot="MR0">
+<instance part="J1" gate="G$1" x="15.24" y="147.32" smashed="yes" rot="MR0">
 <attribute name="NAME" x="17.78526875" y="150.501590625" size="1.27505" layer="95" rot="MR0"/>
 <attribute name="VALUE" x="17.78715" y="139.678559375" size="1.2761" layer="96" rot="MR0"/>
 </instance>
-<instance part="J6" gate="G$1" x="15.24" y="104.14" smashed="yes" rot="MR0">
+<instance part="J3" gate="G$1" x="15.24" y="104.14" smashed="yes" rot="MR0">
 <attribute name="NAME" x="17.78526875" y="107.321590625" size="1.27505" layer="95" rot="MR0"/>
 <attribute name="VALUE" x="17.78715" y="96.498559375" size="1.2761" layer="96" rot="MR0"/>
 </instance>
-<instance part="J7" gate="G$1" x="93.98" y="116.84" smashed="yes">
+<instance part="J4" gate="G$1" x="93.98" y="116.84" smashed="yes">
 <attribute name="NAME" x="91.43473125" y="120.021590625" size="1.27505" layer="95"/>
 <attribute name="VALUE" x="91.43285" y="109.198559375" size="1.2761" layer="96"/>
 </instance>
@@ -793,26 +799,49 @@ sensor</text>
 <instance part="P+5" gate="1" x="43.18" y="58.42" smashed="yes">
 <attribute name="VALUE" x="40.64" y="53.34" size="1.778" layer="96" rot="R90"/>
 </instance>
+<instance part="J2" gate="G$1" x="15.24" y="134.62" smashed="yes" rot="MR0">
+<attribute name="NAME" x="17.78526875" y="137.801590625" size="1.27505" layer="95" rot="MR0"/>
+<attribute name="VALUE" x="17.78715" y="126.978559375" size="1.2761" layer="96" rot="MR0"/>
+</instance>
+<instance part="J6" gate="G$1" x="228.6" y="111.76" smashed="yes">
+<attribute name="NAME" x="226.05818125" y="117.860359375" size="1.77926875" layer="95"/>
+<attribute name="VALUE" x="226.05705" y="101.5882" size="1.780059375" layer="96"/>
+</instance>
+<instance part="GND7" gate="1" x="218.44" y="101.6" smashed="yes">
+<attribute name="VALUE" x="215.9" y="99.06" size="1.778" layer="96"/>
+</instance>
+<instance part="P+6" gate="1" x="218.44" y="119.38" smashed="yes">
+<attribute name="VALUE" x="215.9" y="114.3" size="1.778" layer="96" rot="R90"/>
+</instance>
 </instances>
 <busses>
 </busses>
 <nets>
-<net name="N$1" class="0">
+<net name="AC_L" class="0">
 <segment>
 <pinref part="PS1" gate="G$1" pin="AC_L"/>
-<wire x1="22.86" y1="147.32" x2="27.94" y2="147.32" width="0.1524" layer="91"/>
+<wire x1="22.86" y1="147.32" x2="25.4" y2="147.32" width="0.1524" layer="91"/>
+<wire x1="25.4" y1="147.32" x2="27.94" y2="147.32" width="0.1524" layer="91"/>
 <wire x1="27.94" y1="147.32" x2="27.94" y2="149.86" width="0.1524" layer="91"/>
 <wire x1="27.94" y1="149.86" x2="33.02" y2="149.86" width="0.1524" layer="91"/>
-<pinref part="J5" gate="G$1" pin="1"/>
+<pinref part="J1" gate="G$1" pin="1"/>
+<pinref part="J2" gate="G$1" pin="1"/>
+<wire x1="22.86" y1="134.62" x2="25.4" y2="134.62" width="0.1524" layer="91"/>
+<wire x1="25.4" y1="134.62" x2="25.4" y2="147.32" width="0.1524" layer="91"/>
+<junction x="25.4" y="147.32"/>
 </segment>
 </net>
-<net name="N$3" class="0">
+<net name="AC_N" class="0">
 <segment>
 <pinref part="PS1" gate="G$1" pin="AC_N"/>
 <wire x1="22.86" y1="144.78" x2="27.94" y2="144.78" width="0.1524" layer="91"/>
 <wire x1="27.94" y1="144.78" x2="27.94" y2="139.7" width="0.1524" layer="91"/>
 <wire x1="27.94" y1="139.7" x2="33.02" y2="139.7" width="0.1524" layer="91"/>
-<pinref part="J5" gate="G$1" pin="2"/>
+<pinref part="J1" gate="G$1" pin="2"/>
+<pinref part="J2" gate="G$1" pin="2"/>
+<wire x1="22.86" y1="132.08" x2="27.94" y2="132.08" width="0.1524" layer="91"/>
+<wire x1="27.94" y1="132.08" x2="27.94" y2="139.7" width="0.1524" layer="91"/>
+<junction x="27.94" y="139.7"/>
 </segment>
 </net>
 <net name="GND" class="0">
@@ -850,10 +879,10 @@ sensor</text>
 <wire x1="22.86" y1="101.6" x2="30.48" y2="101.6" width="0.1524" layer="91"/>
 <wire x1="30.48" y1="101.6" x2="30.48" y2="99.06" width="0.1524" layer="91"/>
 <pinref part="GND4" gate="1" pin="GND"/>
-<pinref part="J6" gate="G$1" pin="2"/>
+<pinref part="J3" gate="G$1" pin="2"/>
 </segment>
 <segment>
-<pinref part="J3" gate="G$1" pin="4"/>
+<pinref part="J5" gate="G$1" pin="4"/>
 <wire x1="220.98" y1="134.62" x2="218.44" y2="134.62" width="0.1524" layer="91"/>
 <wire x1="218.44" y1="134.62" x2="218.44" y2="132.08" width="0.1524" layer="91"/>
 <pinref part="GND5" gate="1" pin="GND"/>
@@ -863,6 +892,12 @@ sensor</text>
 <wire x1="45.72" y1="40.64" x2="43.18" y2="40.64" width="0.1524" layer="91"/>
 <wire x1="43.18" y1="40.64" x2="43.18" y2="38.1" width="0.1524" layer="91"/>
 <pinref part="GND6" gate="1" pin="GND"/>
+</segment>
+<segment>
+<pinref part="J6" gate="G$1" pin="4"/>
+<wire x1="220.98" y1="106.68" x2="218.44" y2="106.68" width="0.1524" layer="91"/>
+<wire x1="218.44" y1="106.68" x2="218.44" y2="104.14" width="0.1524" layer="91"/>
+<pinref part="GND7" gate="1" pin="GND"/>
 </segment>
 </net>
 <net name="+5V" class="0">
@@ -879,7 +914,7 @@ sensor</text>
 <pinref part="P+2" gate="1" pin="+5V"/>
 </segment>
 <segment>
-<pinref part="J3" gate="G$1" pin="1"/>
+<pinref part="J5" gate="G$1" pin="1"/>
 <wire x1="220.98" y1="142.24" x2="218.44" y2="142.24" width="0.1524" layer="91"/>
 <wire x1="218.44" y1="142.24" x2="218.44" y2="144.78" width="0.1524" layer="91"/>
 <pinref part="P+3" gate="1" pin="+5V"/>
@@ -896,6 +931,12 @@ sensor</text>
 <wire x1="43.18" y1="53.34" x2="43.18" y2="55.88" width="0.1524" layer="91"/>
 <pinref part="P+5" gate="1" pin="+5V"/>
 </segment>
+<segment>
+<pinref part="J6" gate="G$1" pin="1"/>
+<wire x1="220.98" y1="114.3" x2="218.44" y2="114.3" width="0.1524" layer="91"/>
+<wire x1="218.44" y1="114.3" x2="218.44" y2="116.84" width="0.1524" layer="91"/>
+<pinref part="P+6" gate="1" pin="+5V"/>
+</segment>
 </net>
 <net name="I2C_SCL" class="0">
 <segment>
@@ -904,9 +945,14 @@ sensor</text>
 <label x="185.42" y="142.24" size="1.27" layer="95" xref="yes"/>
 </segment>
 <segment>
-<pinref part="J3" gate="G$1" pin="3"/>
+<pinref part="J5" gate="G$1" pin="3"/>
 <wire x1="220.98" y1="137.16" x2="218.44" y2="137.16" width="0.1524" layer="91"/>
 <label x="218.44" y="137.16" size="1.27" layer="95" rot="R180" xref="yes"/>
+</segment>
+<segment>
+<pinref part="J6" gate="G$1" pin="3"/>
+<wire x1="220.98" y1="109.22" x2="218.44" y2="109.22" width="0.1524" layer="91"/>
+<label x="218.44" y="109.22" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
 <net name="I2C_SDA" class="0">
@@ -916,9 +962,14 @@ sensor</text>
 <label x="185.42" y="139.7" size="1.27" layer="95" xref="yes"/>
 </segment>
 <segment>
-<pinref part="J3" gate="G$1" pin="2"/>
+<pinref part="J5" gate="G$1" pin="2"/>
 <wire x1="220.98" y1="139.7" x2="218.44" y2="139.7" width="0.1524" layer="91"/>
 <label x="218.44" y="139.7" size="1.27" layer="95" rot="R180" xref="yes"/>
+</segment>
+<segment>
+<pinref part="J6" gate="G$1" pin="2"/>
+<wire x1="220.98" y1="111.76" x2="218.44" y2="111.76" width="0.1524" layer="91"/>
+<label x="218.44" y="111.76" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
 <net name="SSR" class="0">
@@ -930,7 +981,7 @@ sensor</text>
 <segment>
 <wire x1="22.86" y1="104.14" x2="30.48" y2="104.14" width="0.1524" layer="91"/>
 <label x="30.48" y="104.14" size="1.27" layer="95" xref="yes"/>
-<pinref part="J6" gate="G$1" pin="1"/>
+<pinref part="J3" gate="G$1" pin="1"/>
 </segment>
 </net>
 <net name="TC-" class="0">
@@ -940,7 +991,7 @@ sensor</text>
 <label x="38.1" y="48.26" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 <segment>
-<pinref part="J7" gate="G$1" pin="2"/>
+<pinref part="J4" gate="G$1" pin="2"/>
 <wire x1="86.36" y1="114.3" x2="83.82" y2="114.3" width="0.1524" layer="91"/>
 <label x="83.82" y="114.3" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
@@ -952,7 +1003,7 @@ sensor</text>
 <label x="38.1" y="45.72" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 <segment>
-<pinref part="J7" gate="G$1" pin="1"/>
+<pinref part="J4" gate="G$1" pin="1"/>
 <wire x1="86.36" y1="116.84" x2="83.82" y2="116.84" width="0.1524" layer="91"/>
 <label x="83.82" y="116.84" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
